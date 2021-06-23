@@ -3,6 +3,14 @@ export const initialState = {
     basket: [],
 };
 
+// get the price for the subtotal
+// iterate through the basket (using the variable "basket"), get the item.price and keep adding it to the amount at each instance, starting with initial value=0;
+export const getBasketTotal = (basket) => (
+    basket?.reduce((amount, item) => item.price + amount, 0)
+);
+
+console.log("this is basketTotal", getBasketTotal)
+
 const reducer = (state, action) => {
     switch(action.type){
         case 'ADD_TO_BASKET':

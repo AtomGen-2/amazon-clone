@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Header from "./Header.js";
 import Home from "./Home.js";
+import Login from "./Login.js";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
               <Checkout/>
             </Route>
             <Route path="/login">
-              <h1>Login</h1>
+              <Login/>
             </Route>
           </Switch>
         </div>
