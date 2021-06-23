@@ -21,8 +21,7 @@ function Subtotal() {
                 </>
             )}
                 decimalScale={2}
-                // value={getBasketTotal(basket)}
-                value={2000}
+                value={getBasketTotal(basket)}
                 displayType={"text"}
                 thousandsSeperator={true}
                 prefix={"₹"}
