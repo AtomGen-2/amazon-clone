@@ -1,4 +1,5 @@
 import './App.css';
+import Checkout from "./Checkout.js";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,7 +19,7 @@ function App() {
             </Route>
             <Route path="/checkout">
               <Header/>
-              <h1>checkout</h1>
+              <Checkout/>
             </Route>
             <Route path="/login">
               <h1>Login</h1>
