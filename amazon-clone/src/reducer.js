@@ -1,15 +1,17 @@
 // how the data layer looks initially, when we havent added anything.
 export const initialState = {
     basket: [],
+    user: null,
 };
 
 // get the price for the subtotal
 // iterate through the basket (using the variable "basket"), get the item.price and keep adding it to the amount at each instance, starting with initial value=0;
-export const getBasketTotal = (basket) => (
-    basket?.reduce((amount, item) => item.price + amount, 0)
+
+export const getBasketTotaling = (basket) => (
+    basket.reduce((amount, item) => item.price + amount, 0)
 );
 
-console.log("this is basketTotal", getBasketTotal)
+console.log("this is basketTotal", getBasketTotaling)
 
 const reducer = (state, action) => {
     switch(action.type){
@@ -37,6 +39,11 @@ const reducer = (state, action) => {
                 ...state, 
                 basket: newBasket,
             };
+        case "SET_USER":
+            return {
+                ...state,
+                user:action.user
+            }
         default: 
             return state;
     }
